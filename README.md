@@ -1,5 +1,6 @@
 # v1.db
 Devoir info 1ère partie | 19.04.23
+
 Table etudiants {
   matricule integer [primary key]
   nom varchar
