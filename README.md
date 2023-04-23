@@ -1,5 +1,5 @@
 # v1.db
-Devoir info 1ère partie | 19.04.23
+Devoir info 2ème partie | 23.04.23
 
 Table etudiants {
   matricule integer [primary key]
@@ -26,6 +26,15 @@ Table inscriptions {
   cours_id integer
 }
 
+Table evaluations {
+  note integer
+  coefficient integer
+  rendu_le timestamp
+}
+
+
 Ref: inscriptions.student_id > etudiants.matricule
 Ref: inscriptions.cours_id > cours.id_cours
 Ref: cours.id_cours > professeurs.nom
+Ref: evaluations.note > inscriptions.cours_id
+Ref: evaluations.note > inscriptions.student_id
